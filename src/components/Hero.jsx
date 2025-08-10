@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Hero content */}
       <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
         <h1 className="text-6xl md:text-8xl font-bold mb-12">
-          Working for a sustainable growth
+          Working for not a sustainable growth
         </h1>
         <div className="flex flex-col sm:flex-row gap-4">
           <button className="bg-[#00df9a] text-black font-semibold text-lg px-8 py-4 box-border shadow-md hover:bg-[#00c27b] hover:shadow-lg transition duration-300 ease-in-out cursor-pointer min-w-[220px]">

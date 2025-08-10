@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import logo from "../assets/company_logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -9,7 +10,11 @@ const Navbar = () => {
     <nav className="absolute top-0 left-0 w-full bg-transparent z-20">
       <div className="flex justify-between items-center h-20 max-w-[1240px] mx-auto px-6 text-white">
         {/* Logo */}
-        <h1 className="text-3xl font-bold tracking-wide">HASHIMUKH</h1>
+        <img
+          src={logo}
+          alt="Hashimukh Logo"
+          className="h-8 sm:h-10 w-auto cursor-pointer"
+        />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-lg">
@@ -35,7 +40,13 @@ const Navbar = () => {
           nav ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <h1 className="text-3xl font-bold m-6 text-white">HASHIMUKH</h1>
+        <div className="m-6">
+          <img
+            src={logo}
+            alt="Hashimukh Logo"
+            className="h-8 sm:h-10 w-auto cursor-pointer"
+          />
+        </div>
         <ul className="uppercase space-y-4 px-6 text-lg text-[#d9d9d9]">
           <li className="border-b border-gray-600 pb-2">Policies</li>
           <li className="border-b border-gray-600 pb-2">Gallery</li>

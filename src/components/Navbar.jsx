@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo from "../assets/company_logo.png";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -57,11 +58,13 @@ const Navbar = () => {
           }`}
         >
           {/* Logo */}
-          <img
-            src={logo}
-            alt="Hashimukh Logo"
-            className="h-8 sm:h-10 w-auto cursor-pointer"
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Hashimukh Logo"
+              className="h-8 sm:h-10 w-auto cursor-pointer"
+            />
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-6 text-lg">

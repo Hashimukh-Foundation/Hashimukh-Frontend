@@ -4,6 +4,7 @@ import OngoingActivity from "./OngoingActivity.jsx";
 import CurrentProjectsPage from "./CurrentProjectsPage.jsx";
 import Footer from "./Footer.jsx";
 import AboutUsSection from "./AboutUsSection.jsx";
+import PhotosSection from "./PhotosSection.jsx";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Hero />
       <OngoingActivity />
       <AboutUsSection />
+      <PhotosSection />
       <CurrentProjectsPage />
       <Footer />
     </div>

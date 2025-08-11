@@ -110,14 +110,14 @@ const CurrentProjectsPage = () => {
           </button>
 
           {/* Dot Indicators */}
-          <div className="flex justify-center mt-6 space-x-2">
+          <div className="flex justify-center mt-2 space-x-2">
             {projects.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                   index === currentSlide
-                    ? "bg-[#00df9a] scale-110"
+                    ? "bg-[#4AB050] scale-110"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -126,6 +126,12 @@ const CurrentProjectsPage = () => {
           </div>
         </div>
       )}
+      <button
+        className="my-4 text-white w-[240px] py-3 px-4 bg-[#4AB050] font-medium rounded-md hover:bg-[#357e3a] transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
+        type="button"
+      >
+        Show more
+      </button>
     </div>
   );
 };

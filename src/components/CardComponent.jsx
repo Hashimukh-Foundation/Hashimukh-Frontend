@@ -39,7 +39,7 @@ const CardComponent = ({ imgSrc, title, description, onClick }) => {
         {/* Call to Action Button */}
         <button
           onClick={handleSeeDetails}
-          className="w-full py-3 px-4 bg-white border-2 border-[#00df9a] text-[#00df9a] font-medium rounded-md hover:bg-teal-50 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00df9a] focus:ring-offset-2"
+          className="w-full py-3 px-4 bg-white border-2 border-[#4AB050] text-[#4AB050] font-medium rounded-md hover:bg-green-50 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
           type="button"
           aria-label={`View details for ${title}`}
         >

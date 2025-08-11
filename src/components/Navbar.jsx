@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo from "../assets/company_logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [nav, setNav] = useState(false);
   const handleNav = () => setNav(!nav);
+
+  function handlePolicyClick() {
+    navigate("/policies");
+  }
+  function handleAboutUsClick() {
+    navigate("/about");
+  }
 
   return (
     <nav className="absolute top-0 left-0 w-full bg-transparent z-20">
@@ -18,11 +27,21 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-lg">
-          <li className="hover:text-[#00df9a] cursor-pointer">Policies</li>
-          <li className="hover:text-[#00df9a] cursor-pointer">Gallery</li>
-          <li className="hover:text-[#00df9a] cursor-pointer">About</li>
-          <li className="hover:text-[#00df9a] cursor-pointer">Contact</li>
-          <li className="hover:text-[#00df9a] cursor-pointer">Join Us</li>
+          <li
+            className="hover:text-[#4AB050] cursor-pointer"
+            onClick={handlePolicyClick}
+          >
+            Policies
+          </li>
+          <li className="hover:text-[#4AB050] cursor-pointer">Gallery</li>
+          <li
+            className="hover:text-[#4AB050] cursor-pointer"
+            onClick={handleAboutUsClick}
+          >
+            About
+          </li>
+          <li className="hover:text-[#4AB050] cursor-pointer">Contact</li>
+          <li className="hover:text-[#4AB050] cursor-pointer">Join Us</li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -48,11 +67,25 @@ const Navbar = () => {
           />
         </div>
         <ul className="uppercase space-y-4 px-6 text-lg text-[#d9d9d9]">
-          <li className="border-b border-gray-600 pb-2">Policies</li>
-          <li className="border-b border-gray-600 pb-2">Gallery</li>
-          <li className="border-b border-gray-600 pb-2">About</li>
-          <li className="border-b border-gray-600 pb-2">Contact</li>
-          <li>Join Us</li>
+          <li
+            className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050]"
+            onClick={handlePolicyClick}
+          >
+            Policies
+          </li>
+          <li className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050">
+            Gallery
+          </li>
+          <li
+            className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050"
+            onClick={handleAboutUsClick}
+          >
+            About
+          </li>
+          <li className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050">
+            Contact
+          </li>
+          <li className="cursor-pointer hover:text-[#4AB050">Join Us</li>
         </ul>
       </div>
     </nav>

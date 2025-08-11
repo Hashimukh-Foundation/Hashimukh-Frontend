@@ -3,6 +3,7 @@ import Hero from "./Hero.jsx";
 import OngoingActivity from "./OngoingActivity.jsx";
 import CurrentProjectsPage from "./CurrentProjectsPage.jsx";
 import Footer from "./Footer.jsx";
+import AboutUsSection from "./AboutUsSection.jsx";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <Navbar />
       <Hero />
       <OngoingActivity />
+      <AboutUsSection />
       <CurrentProjectsPage />
       <Footer />
     </div>

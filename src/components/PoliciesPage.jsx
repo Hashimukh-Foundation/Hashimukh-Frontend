@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
 
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react"; // optional icon
+
 const PoliciesPage = () => {
   const sections = [
     { id: "introduction", label: "Introduction" },
@@ -14,6 +17,14 @@ const PoliciesPage = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Header */}
+      {/* Go Back link */}
+      <Link
+        to="/"
+        className="absolute top-1 left-4 flex items-center text-white hover:text-green-300 transition-colors"
+      >
+        <ArrowLeft className="w-4 h-4 mr-2" /> {/* icon */}
+        Go Back
+      </Link>
       <header className=" bg-green-900 text-white text-center py-6 sm:py-8 px-4">
         <h1 className="text-2xl sm:text-3xl font-bold">
           Hashimukh Foundation Policies

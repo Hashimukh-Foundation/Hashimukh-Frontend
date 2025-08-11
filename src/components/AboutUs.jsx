@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./Footer.jsx";
+import Image from "../assets/aboutbg.webp";
 import {
   Users,
   Heart,
@@ -9,21 +10,40 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react"; // optional icon
+import FloatyNavbar from "./FloatyNavbar.jsx";
+
 export default function AboutUs() {
   return (
     <div className="bg-white">
+      {/* <img src={Image} alt="" /> */}
       {/* Page Header */}
-      <div className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About Us
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Working for sustainable growth and empowering communities through
-              education, compassion, and hope since 2019
-            </p>
-          </div>
+      <FloatyNavbar />
+      <div
+        className="relative py-16  bg-cover bg-[center_top_30%]"
+        style={{
+          backgroundImage: `url(${Image})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>{" "}
+        {/* Go Back link */}
+        <Link
+          to="/"
+          className="absolute top-4 left-4 flex items-center text-white hover:text-green-300 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" /> {/* icon */}
+          Go Back
+        </Link>
+        {/* dark overlay */}
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            About Us
+          </h1>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Working for sustainable growth and empowering communities through
+            education, compassion, and hope since 2019
+          </p>
         </div>
       </div>
 

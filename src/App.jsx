@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PoliciesPage from "./components/PoliciesPage";
 import Home from "./components/Home";
 import AboutUs from "./components/AboutUs";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/policies" element={<PoliciesPage />} />

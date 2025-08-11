@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [nav, setNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
+  const [showNavbar, setShowNavbar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleNav = () => setNav(!nav);
@@ -25,11 +25,14 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
+      // Show navbar only when scrolled down
       setIsScrolled(currentScrollY > 50);
+      setShowNavbar(currentScrollY > 50);
 
+      // Hide navbar when scrolling down fast, show when scrolling up
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setShowNavbar(false);
-      } else {
+      } else if (currentScrollY < lastScrollY && currentScrollY > 50) {
         setShowNavbar(true);
       }
 
@@ -43,18 +46,12 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed z-30 transition-all duration-300 ${
-          showNavbar ? "translate-y-0" : "-translate-y-20"
-        } ${
-          isScrolled
-            ? "top-4 left-4 right-4 lg:left-[15%] lg:right-[15%] bg-[#E2E2E2] shadow-lg text-black rounded-xl lg:rounded-2xl"
-            : "top-0 left-0 right-0 w-full lg:w-[70%] lg:left-[15%] lg:right-auto bg-transparent text-white"
+        className={`fixed top-4 left-4 right-4 lg:left-[15%] lg:right-[15%] z-30 transition-all duration-300 bg-[#E2E2E2] shadow-lg text-black rounded-xl lg:rounded-2xl ${
+          showNavbar ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"
         }`}
       >
         <div
-          className={`flex justify-between items-center max-w-[1240px] mx-auto px-6 ${
-            isScrolled ? "h-16" : "h-20"
-          }`}
+          className={`flex justify-between items-center max-w-[1240px] mx-auto px-6 h-16`}
         >
           {/* Logo */}
           <img
@@ -91,9 +88,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div
             onClick={handleNav}
-            className={`block md:hidden z-40 cursor-pointer transition-colors duration-200 ${
-              isScrolled ? "p-2 rounded-lg hover:bg-gray-100" : ""
-            }`}
+            className="block md:hidden z-40 cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
             {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
           </div>

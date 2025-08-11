@@ -3,12 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const photos = [
-  "/photos/1.jpg",
-  "/photos/2.jpg",
-  "/photos/3.jpg",
-  "/photos/4.jpg",
-  "/photos/5.jpg",
-  "/photos/6.jpg",
+  "/photos/1w.jpg",
+  "/photos/2w.jpg",
+  "/photos/3w.jpg",
+  "/photos/4w.jpg",
+  "/photos/5w.jpg",
+  "/photos/6w.jpg",
 ];
 
 export default function PhotosSection() {
@@ -28,6 +28,7 @@ export default function PhotosSection() {
                 src={src}
                 alt={`Photo ${index + 1}`}
                 className="w-full h-64 object-cover"
+                loading="lazy"
               />
             </div>
           ))}

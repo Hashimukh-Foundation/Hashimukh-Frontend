@@ -1,5 +1,6 @@
 // PhotosSection.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 const photos = [
   "/photos/1.jpg",
@@ -34,12 +35,15 @@ export default function PhotosSection() {
 
         {/* Center button */}
         <div className="flex justify-center">
-          <button
-            className="my-4 text-white w-[240px] py-3 px-4 bg-[#4AB050] font-medium rounded-md hover:bg-[#357e3a] transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
-            type="button"
-          >
-            Show more
-          </button>
+          <Link to="/gallery">
+            {" "}
+            <button
+              className="my-4 text-white w-[240px] py-3 px-4 bg-[#4AB050] font-medium rounded-md hover:bg-[#357e3a] transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
+              type="button"
+            >
+              Show more
+            </button>
+          </Link>
         </div>
       </div>
     </section>

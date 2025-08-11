@@ -5,6 +5,8 @@ import CurrentProjectsPage from "./CurrentProjectsPage.jsx";
 import Footer from "./Footer.jsx";
 import AboutUsSection from "./AboutUsSection.jsx";
 import PhotosSection from "./PhotosSection.jsx";
+import ContactSection from "./ContactSection.jsx";
+import JoinUsSection from "./JoinUsSection.jsx";
 
 function Home() {
   return (
@@ -15,6 +17,8 @@ function Home() {
       <AboutUsSection />
       <PhotosSection />
       <CurrentProjectsPage />
+      <JoinUsSection />
+      <ContactSection />
       <Footer />
     </div>
   );

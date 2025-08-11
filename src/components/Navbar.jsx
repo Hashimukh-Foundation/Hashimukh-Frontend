@@ -21,6 +21,10 @@ const Navbar = () => {
     navigate("/about");
     setNav(false); // close mobile menu on click
   }
+  function handleGalleryClick() {
+    navigate("/gallery");
+    setNav(false);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +78,10 @@ const Navbar = () => {
             >
               Policies
             </li>
-            <li className="hover:text-[#4AB050] cursor-pointer transition-colors duration-200">
+            <li
+              className="hover:text-[#4AB050] cursor-pointer transition-colors duration-200"
+              onClick={handleGalleryClick}
+            >
               Gallery
             </li>
             <li
@@ -124,7 +131,10 @@ const Navbar = () => {
           >
             Policies
           </li>
-          <li className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050] transition-colors duration-200">
+          <li
+            className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050] transition-colors duration-200"
+            onClick={handleGalleryClick}
+          >
             Gallery
           </li>
           <li

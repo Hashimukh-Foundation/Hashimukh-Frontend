@@ -5,11 +5,13 @@ import AboutUs from "./components/AboutUs";
 import ScrollToTop from "./components/ScrollToTop";
 import Gallery from "./components/Gallery";
 import JoinUs from "./components/JoinUs";
+import DevNoticeModal from "./components/DevNoticeModal";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <DevNoticeModal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/policies" element={<PoliciesPage />} />

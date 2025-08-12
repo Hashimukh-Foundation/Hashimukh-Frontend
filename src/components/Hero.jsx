@@ -18,7 +18,7 @@ const Hero = () => {
 
       {/* Hero content */}
       <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-6xl md:text-8xl font-bold mb-12">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-12">
           Working for a <span className="text-[#4AB050]">sustainable</span>{" "}
           growth
         </h1>

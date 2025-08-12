@@ -73,7 +73,7 @@ const CurrentProjectsPage = () => {
 
       {/* Mobile/Tablet View - Carousel */}
       {isMobile && (
-        <div className="w-full max-w-sm mx-auto relative">
+        <div className="w-full max-w-sm mx-auto relative px-2 xs:px-4">
           {/* Carousel Container */}
           <div className="relative overflow-hidden rounded-lg">
             <div
@@ -81,7 +81,10 @@ const CurrentProjectsPage = () => {
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {projects.map((project, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-2">
+                <div
+                  key={index}
+                  className="w-full flex-shrink-0 px-0.5 xs:px-1"
+                >
                   <CardComponent
                     imgSrc={project.imgSrc}
                     title={project.title}
@@ -95,18 +98,18 @@ const CurrentProjectsPage = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+            className="absolute left-0.5 xs:left-1 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-1.5 xs:p-2 shadow-lg transition-all duration-200 z-10"
             aria-label="Previous project"
           >
-            <ChevronLeft size={20} color="#4AB050" />
+            <ChevronLeft className="w-4 h-4 xs:w-5 xs:h-5" color="#4AB050" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
+            className="absolute right-0.5 xs:right-1 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-1.5 xs:p-2 shadow-lg transition-all duration-200 z-10"
             aria-label="Next project"
           >
-            <ChevronRight size={20} color="#4AB050" />
+            <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5" color="#4AB050" />
           </button>
 
           {/* Dot Indicators */}
@@ -115,7 +118,7 @@ const CurrentProjectsPage = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                className={`w-2.5 h-2.5 xs:w-3 xs:h-3 rounded-full transition-all duration-200 ${
                   index === currentSlide
                     ? "bg-[#4AB050] scale-110"
                     : "bg-gray-300 hover:bg-gray-400"
@@ -127,7 +130,7 @@ const CurrentProjectsPage = () => {
         </div>
       )}
       <button
-        className="my-4 text-white w-[240px] py-3 px-4 bg-[#4AB050] font-medium rounded-md hover:bg-[#357e3a] transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
+        className="my-4 text-white w-[200px] xs:w-[240px] py-3 px-4 bg-[#4AB050] font-medium rounded-md hover:bg-[#357e3a] transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
         type="button"
       >
         Show more

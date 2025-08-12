@@ -3,7 +3,10 @@ import React from "react";
 
 export default function ContactSection() {
   return (
-    <section className="bg-[#4AB050] text-white py-16 px-4 w-full md:w-[60%] md:ml-[20%] md:rounded-t-2xl">
+    <section
+      id="contact"
+      className="bg-[#4AB050] text-white py-16 px-4 w-full md:w-[60%] md:ml-[20%] md:rounded-t-2xl"
+    >
       <div className="max-w-3xl mx-auto space-y-10">
         {/* Top - Info */}
         <div className="text-center">

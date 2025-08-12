@@ -54,7 +54,7 @@ const CurrentProjectsPage = () => {
   };
 
   return (
-    <div className="flex flex-col m-auto items-center">
+    <div id="projectShowcase" className="flex flex-col m-auto items-center">
       <h1 className="text-5xl font-bold m-7">Project Showcase</h1>
 
       {/* Desktop View - Normal Grid */}
@@ -98,7 +98,7 @@ const CurrentProjectsPage = () => {
             className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
             aria-label="Previous project"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={20} color="#4AB050" />
           </button>
 
           <button
@@ -106,7 +106,7 @@ const CurrentProjectsPage = () => {
             className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 z-10"
             aria-label="Next project"
           >
-            <ChevronRight size={20} />
+            <ChevronRight size={20} color="#4AB050" />
           </button>
 
           {/* Dot Indicators */}

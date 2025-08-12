@@ -19,10 +19,22 @@ const Navbar = () => {
   }
   function handleAboutUsClick() {
     navigate("/about");
-    setNav(false); // close mobile menu on click
+    setNav(false);
   }
   function handleGalleryClick() {
     navigate("/gallery");
+    setNav(false);
+  }
+  function handleJoinUsClick() {
+    navigate("/joinus");
+    setNav(false);
+  }
+  function handleMobileNavContactClick() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    setNav(false);
+  }
+  function handleMobileNavLogoClick() {
+    document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
     setNav(false);
   }
 
@@ -67,6 +79,11 @@ const Navbar = () => {
               src={logo}
               alt="Hashimukh Logo"
               className="h-8 sm:h-10 w-auto cursor-pointer"
+              onClick={() =>
+                document
+                  .getElementById("hero")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
             />
           </Link>
 
@@ -90,10 +107,20 @@ const Navbar = () => {
             >
               About
             </li>
-            <li className="hover:text-[#4AB050] cursor-pointer transition-colors duration-200">
+            <li
+              className="hover:text-[#4AB050] cursor-pointer transition-colors duration-200"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Contact
             </li>
-            <li className="hover:text-[#4AB050] cursor-pointer transition-colors duration-200">
+            <li
+              className="hover:text-[#4AB050] cursor-pointer transition-colors duration-200"
+              onClick={handleJoinUsClick}
+            >
               Join Us
             </li>
           </ul>
@@ -121,7 +148,7 @@ const Navbar = () => {
             src={logo}
             alt="Hashimukh Logo"
             className="h-8 sm:h-10 w-auto cursor-pointer"
-            onClick={() => setNav(false)} // optional close on logo click
+            onClick={handleMobileNavLogoClick} // optional close on logo click
           />
         </div>
         <ul className="uppercase space-y-4 px-6 text-lg text-[#d9d9d9]">
@@ -143,10 +170,16 @@ const Navbar = () => {
           >
             About
           </li>
-          <li className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050] transition-colors duration-200">
+          <li
+            className="border-b border-gray-600 pb-2 cursor-pointer hover:text-[#4AB050] transition-colors duration-200"
+            onClick={handleMobileNavContactClick}
+          >
             Contact
           </li>
-          <li className="cursor-pointer hover:text-[#4AB050] transition-colors duration-200">
+          <li
+            className="cursor-pointer hover:text-[#4AB050] transition-colors duration-200"
+            onClick={handleJoinUsClick}
+          >
             Join Us
           </li>
         </ul>

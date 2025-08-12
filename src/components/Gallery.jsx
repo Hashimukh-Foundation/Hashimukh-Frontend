@@ -18,7 +18,9 @@ const Gallery = () => {
 
       {/* Centered text */}
       <div className="flex items-center justify-center min-h-screen">
-        <h1 className="text-7xl font-black text-[#00A63E] ">Coming Soon...</h1>
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#00A63E] ">
+          Coming Soon...
+        </h1>
       </div>
     </div>
   );

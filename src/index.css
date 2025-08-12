@@ -5,6 +5,16 @@ body {
   font-family: "Cabin", sans-serif;
   /* scroll-behavior: smooth; */
 }
+/* Works on Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Works on Firefox */
+html {
+  scrollbar-width: none;
+}
+
 /* 
 @keyframes fadeIn {
   from {

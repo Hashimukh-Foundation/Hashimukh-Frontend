@@ -55,7 +55,7 @@ const CurrentProjectsPage = () => {
 
   return (
     <div id="projectShowcase" className="flex flex-col m-auto items-center">
-      <h1 className="text-5xl font-bold m-7">Project Showcase</h1>
+      <h1 className="text-4xl md:text-5xl font-bold m-7">Project Showcase</h1>
 
       {/* Desktop View - Normal Grid */}
       {!isMobile && (

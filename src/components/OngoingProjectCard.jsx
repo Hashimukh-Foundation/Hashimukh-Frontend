@@ -12,7 +12,7 @@ const CardComponent = ({ imgSrc, title, description, onClick }) => {
   };
 
   return (
-    <div className="w-full max-w-sm bg-white rounded-lg shadow-md overflow-hidden m-3 flex-shrink-0">
+    <div className="w-full max-w-sm mx-4 bg-white rounded-lg shadow-md overflow-hidden my-3 max-[400px]:max-w-xs max-[400px]:mx-2">
       {/* Image Section */}
       <div className="relative">
         <img
@@ -21,7 +21,7 @@ const CardComponent = ({ imgSrc, title, description, onClick }) => {
           className="w-full h-48 object-cover"
           loading="lazy"
           onError={(e) => {
-            e.target.src = "/path/to/fallback-image.jpg"; // Add your fallback image path
+            e.target.src = "/path/to/fallback-image.jpg";
           }}
         />
       </div>
@@ -48,7 +48,7 @@ const CardComponent = ({ imgSrc, title, description, onClick }) => {
 
         <button
           onClick={handleSeeDetails}
-          className="text-white w-full py-3 px-4 bg-[#4AB050]  font-medium rounded-md hover:bg-[#347a38] transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
+          className="text-white w-full py-3 px-4 bg-[#4AB050] font-medium rounded-md hover:bg-[#347a38] transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#4AB050] focus:ring-offset-2"
           type="button"
           aria-label={`View details for ${title}`}
         >

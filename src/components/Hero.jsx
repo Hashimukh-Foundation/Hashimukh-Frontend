@@ -1,8 +1,12 @@
 import React from "react";
 import backgroundImage from "../assets/bgw.jpg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    document.title = "Hashimukh";
+  }, []);
   return (
     <div id="hero" className="relative w-full h-screen">
       {/* Background image */}

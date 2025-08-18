@@ -1,10 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react"; // optional icon
 
 const PoliciesPage = () => {
+  useEffect(() => {
+    document.title = "Policy | Hashimukh";
+  }, []);
   const sections = [
     { id: "introduction", label: "Introduction" },
     { id: "member-policies", label: "Member Policies" },

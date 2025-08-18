@@ -1,5 +1,5 @@
 // JoinUs.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import { ArrowLeft } from "lucide-react";
@@ -28,6 +28,10 @@ function FAQItem({ question, answer, isOpen, onClick }) {
 }
 
 export default function JoinUs() {
+  useEffect(() => {
+    document.title = "Join Us | Hashimukh";
+  }, []);
+
   const [otpSent, setOtpSent] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -99,7 +103,7 @@ export default function JoinUs() {
         {/* dark overlay */}
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            About Us
+            Join Us
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Working for sustainable growth and empowering communities through

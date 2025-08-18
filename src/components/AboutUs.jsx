@@ -9,12 +9,16 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
+import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react"; // optional icon
 import FloatyNavbar from "./FloatyNavbar.jsx";
 
 export default function AboutUs() {
+  useEffect(() => {
+    document.title = "About Us | Hashimukh";
+  }, []);
   return (
     <div className="bg-white">
       {/* <img src={Image} alt="" /> */}

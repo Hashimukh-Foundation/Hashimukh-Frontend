@@ -1,8 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/company_logo.png";
 
 const Gallery = () => {
+  useEffect(() => {
+    document.title = "Gallery | Hashimukh";
+  }, []);
   return (
     <div className="relative min-h-screen">
       {/* Logo at the top center */}
